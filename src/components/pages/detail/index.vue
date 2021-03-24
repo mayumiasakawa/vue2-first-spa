@@ -2,8 +2,8 @@
   <div>
     <h1>This is Detail Page!!</h1>
     <ul>
-      <li class="detail-item" v-for="l in list" :key="l.id" @click="move(l.id)">
-        <span>{{l.id}} {{l.name}}</span>
+      <li class="detail-item" v-for="list in lists" :key="list.id" @click="move(list.id)">
+        <span>{{list.id}} {{list.name}}</span>
       </li>
     </ul>
   </div>
@@ -13,7 +13,7 @@
 export default {
   data() {
     return {
-      list: [
+      lists: [
         { id: "001", name: "Aさん" },
         { id: "002", name: "Bさん" },
         { id: "003", name: "Cさん" },
